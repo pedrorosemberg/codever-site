@@ -2,17 +2,21 @@
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CODEVER - Software Development</title>
-        <meta author="Pedro Paulo Rosemberg da Silva Oliveira - pedrorosemberg@aol.com">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="favicon.png.png" type="image/png">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <meta name="description" content="Desenvolvemos softwares sob medida para ajudar sua empresa a inovar e crescer.">
+        <meta name="keywords" content="desenvolvimento de software, soluções personalizadas, tecnologia, inovação">
+        <meta name="author" content="Pedro Paulo Rosemberg da Silva Oliveira - pedrorosemberg@aol.com">
+        <title>CODEVER - Desenvolvimento de Software Sob Medida</title>
+        <link rel="stylesheet" href="styles.css" integrity="sha384-..." crossorigin="anonymous">
+        <link rel="icon" href="favicon.png" type="image/png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-..." crossorigin="anonymous">
+        <meta name="referrer" content="no-referrer">
     </head>
 <body>
     <div class="container">
         <header>
-            <img src="codever.png" alt="Codever Logo" class="logo">
+            <img src="codever.png" alt="Logo da Codever" class="logo" width="auto" height="auto">
             <nav class="menu">
                 <button id="menuToggle">☰</button>
                 <ul id="menuItems">
@@ -120,6 +124,13 @@
         </div>
     </footer>
     <script>
+        // Adiciona CSP (Content Security Policy) para prevenir XSS
+        const csp = "default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
+        const metaCsp = document.createElement('meta');
+        metaCsp.httpsEquiv = "Content-Security-Policy";
+        metaCsp.content = csp;
+        document.head.appendChild(metaCsp);
+        
         document.addEventListener('DOMContentLoaded', function() {
             var menuToggle = document.getElementById('menuToggle');
             var menuItems = document.getElementById('menuItems');
@@ -144,9 +155,9 @@
                     if (window.innerWidth <= 768) {
                         menuItems.classList.remove('show');
                     }
-                });
+                }, { passive: true }); // Listener marcado como passive
             });
-        });
+        }, { passive: true }); // Listener marcado como passive
     </script>
 </body>
 </html>
