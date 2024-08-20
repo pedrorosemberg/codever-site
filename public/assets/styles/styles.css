@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu ul li {
+    margin-left: 20px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #00ff00;
+}
+
+#menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #menuToggle {
+        display: block;
+    }
+}
+
+main, .sobre-nos, .nossos-servicos, .nossos-diferenciais {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 80px 20px;
+}
+
+main::before, .sobre-nos::before, .nossos-servicos::before, .nossos-diferenciais::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+main *, .sobre-nos *, .nossos-servicos *, .nossos-diferenciais * {
+    position: relative;
+    z-index: 2;
+}
+
+main {
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sobre-nos {
+    text-align: center;
+    
+}
+
+h1, h2 {
+    color: #00ff00;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p {
+    margin-bottom: 30px;
+}
+
+.btn-contato, .saiba-mais {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00ff00;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contato:hover, .saiba-mais:hover {
+    background-color: #00b300;
+}
+
+.servicos-grid, .diferenciais-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.servico-item, .diferencial-item {
+    background-color: rgba(34, 34, 34, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.servico-item:hover, .diferencial-item:hover {
+    transform: translateY(-10px);
+}
+
+.servico-item i, .diferencial-item i {
+    font-size: 3rem;
+    color: #00ff00;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p, footer .footer-links {
+    margin: 0;
+}
+
+footer .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #00ff00;
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    footer p, footer .footer-links {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    main, .sobre-nos, .nossos-servicos, .nossos-diferenciais {
+        padding: 60px 0;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .menu ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #000;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .menu ul.show {
+        display: flex;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    #menuToggle {
+        display: block;
+        background: none;
+        border: none;
+        color: #00ff00;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .servicos-grid, .diferenciais-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contato {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contato h2 {
+    color: #00ff00;
+    margin-bottom: 30px;
+}
+
+.contato h3 {
+    color: #00ff00;
+    margin-bottom: 15px;
+}
+
+.contato a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contato a:hover {
+    color: #00ff00;
+}
+
+.contato-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.endereco, .contato-detalhes {
+    flex: 1;
+    min-width: 250px;
+}
+
+.contato p {
+    margin-bottom: 10px;
+}
+
+.mapa {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .contato-info {
+        flex-direction: column;
+    }
+}
+
+/* Estilo para as seções */
+.section {
+    margin: 20px; /* Margem para afastar o conteúdo das bordas da tela */
+    padding: 20px; /* Espaçamento interno */
+    background-color: rgba(255, 255, 255, 0.1); /* Tom mais claro que o fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+}
+
+/* Exemplo de como aplicar a classe .section nas seções */
+@media (min-width: 1024px) {
+    main, .sobre-nos, .nossos-servicos, .nossos-diferenciais, .contato {
+        /* Adiciona a classe .section a cada uma dessas seções */
+        composes: section; /* Se você estiver usando CSS Modules */
+    }
+}
+
+/* Estilo para a classe nossos-servicos-content */
+.nossos-servicos-content {
+    text-align: center;
+    margin: 20px;
+    margin-top: 60px; /* Margem para afastar o conteúdo das bordas da tela */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+}
+
+.hero {
+    background-image: url('../images/imagem_woman_coder.png'); /* Caminho para a imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a seção */
+    background-position: center; /* Centraliza a imagem */
+    height: 400px; /* Defina a altura desejada para a seção HERO */
+    display: flex; /* Para centralizar o conteúdo */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Alinha horizontalmente */
+    color: white; /* Cor do texto, ajuste conforme necessário */
+    text-align: center; /* Centraliza o texto */
+}
