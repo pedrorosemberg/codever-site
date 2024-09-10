@@ -86,7 +86,7 @@ header {
         top: 100%;
         left: 0;
         right: 0;
-        background-color: #000;
+        background-color: rgba(0, 0, 0, 0.8);
         flex-direction: column;
         padding: 20px;
         text-align: right; /* Alinha o texto à direita */
@@ -265,7 +265,7 @@ footer .footer-links a:hover {
         top: 100%;
         left: 0;
         right: 0;
-        background-color: #000;
+        background-color: rgba(0, 0, 0, 0.8);
         flex-direction: column;
         padding: 20px;
         text-align: right; /* Alinha o texto à direita */
