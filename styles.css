@@ -356,7 +356,7 @@ footer .footer-links a:hover {
 }
 
 .hero {
-    background-image: url('../public/assets/images/imagem_woman_coder.png'); /* Caminho para a imagem */
+    background-image: url('assets/images/imagem_woman_coder.png'); /* Caminho para a imagem */
     background-size: cover; /* Faz a imagem cobrir toda a seção */
     background-position: center; /* Centraliza a imagem */
     height: 400px; /* Defina a altura desejada para a seção HERO */
