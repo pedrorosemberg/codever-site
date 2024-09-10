@@ -379,3 +379,24 @@ footer .footer-links a:hover {
     width: 100px; /* Ajuste o tamanho da logo conforme necessário */
     height: auto; /* Mantém a proporção da imagem */
 }
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-content .copyright {
+        margin-bottom: 10px;
+    }
+
+    .footer-content .footer-logo {
+        margin-top: 10px;
+        margin-left: 0; /* Remove a margem esquerda */
+        display: block; /* Garante que a imagem seja tratada como bloco */
+        margin-left: auto; /* Centraliza a imagem */
+        margin-right: auto;
+    }
+}
