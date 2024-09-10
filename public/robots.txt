@@ -1,4 +1,0 @@
-# robots.txt
-User-agent: *
-Disallow: /private/  # Exemplo de diretório que não deve ser indexado
-Allow: /              # Permite o acesso a todo o restante do site
